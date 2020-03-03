@@ -1,7 +1,7 @@
 {
   "name": "chat.io",
   "description": "A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, & Redis.",
-  "repository": "https://github.com/flavioro/chat.io",
+  "repository": "https://github.com/flavioro/chatio",
   "logo": "https://raw.githubusercontent.com/flavioro/chat.io/master/public/img/chat.io.PNG",
   "keywords": [
     "real-time",

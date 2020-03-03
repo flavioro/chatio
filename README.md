@@ -31,7 +31,7 @@ Assegure-se de ter [Node.js](https://nodejs.org/) e [npm](https://www.npmjs.com/
 1.  Clone ou Download do repositório
 
     ```
-    $ git clone https://github.com/flavioro/chat.io.git
+    $ git clone https://github.com/flavioro/chatio.git
     $ cd chat.io
     ```
 

@@ -7,15 +7,13 @@
     "start": "node server.js"
   },
   "repository": {
-    "url": "git+https://github.com/flavioro/chat.io.git",
+    "url": "git+https://github.com/flavioro/chatio.git",
     "type": "git"
   },
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/flavioro/chat.io/issues"
-  },
-  "homepage": "https://github.com/flavioro/chat.io",
+  "bugs": "",
+  "homepage": "https://github.com/flavioro/chatio",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
