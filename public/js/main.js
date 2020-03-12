@@ -1,6 +1,7 @@
 "use strict";
 
 var app = {
+  // Executes when loading the room.ejs page
   rooms: function() {
     var socket = io("/rooms", { transports: ["websocket"] });
 
@@ -31,6 +32,7 @@ var app = {
     });
   },
 
+  // Executes when loading the chatroom.ejs page
   chat: function(roomId, username) {
     var socket = io("/chatroom", { transports: ["websocket"] });
 
@@ -73,7 +75,7 @@ var app = {
 
       // Append a new message
       socket.on("addMessage", function(message) {
-        app.helpers.addMessage(message);
+        app.helpers.addMessage(message, true);
       });
     });
   },
@@ -142,17 +144,20 @@ var app = {
     },
 
     // Adding a new message to chat history
-    addMessage: function(message) {
+    addMessage: function(message, server = false) {
       message.date = new Date(message.date).toLocaleString();
       message.username = this.encodeHTML(message.username);
       message.content = this.encodeHTML(message.content);
+
+      var nameClass = "";
+      if (server) nameClass = "-server";
 
       var html = `<li>
                     <div class="message-data">
                       <span class="message-data-name">${message.username}</span>
                       <span class="message-data-time">${message.date}</span>
                     </div>
-                    <div class="message my-message" dir="auto">${message.content}</div>
+                    <div class="message my-message${nameClass}" dir="auto">${message.content}</div>
                   </li>`;
       $(html)
         .hide()
